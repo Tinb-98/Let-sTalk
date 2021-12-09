@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "302797315591",
+    "project_id": "let-schat-4af38",
+    "storage_bucket": "let-schat-4af38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302797315591:android:11f5f215fdf49b57e7d4a2",
+        "android_client_info": {
+          "package_name": "com.example.lets_talk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302797315591-ovpqeam6ta1vlcl9gjs333tv17su3g8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE7W8MxM45tEnmH3OVZFOQFZLyAFmNJ9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302797315591-ovpqeam6ta1vlcl9gjs333tv17su3g8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
