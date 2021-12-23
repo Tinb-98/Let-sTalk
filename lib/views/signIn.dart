@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lets_talk/Cstm%20Widgets/widget.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class SignIn extends StatefulWidget {
 
@@ -52,27 +53,21 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
               SizedBox(height: 8,),
-              Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(vertical: 20) ,
-                decoration: BoxDecoration(
-                  color: (const Color(0xff8c8c8c)),
-                  borderRadius: BorderRadius.circular(30),
-                ) ,
-                child: Text("Sign In"),
-              ),
-              SizedBox(height: 8,),
-              Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(vertical: 20) ,
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(30),
-                ) ,
-                child: Text("Sign In With Google"),
-              ),
+        SignInButtonBuilder(
+          text: '          Sign in',
+          padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+          onPressed: () {},
+          backgroundColor: Colors.blueAccent[700]!,
+        ),
+
+        SizedBox(height: 8,),
+        SignInButton(
+          Buttons.Google,
+          text: "Sign in with Google",
+          padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+          onPressed: () {},
+        ),
+
                SizedBox(height: 8,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

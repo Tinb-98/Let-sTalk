@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 class SignUp extends StatefulWidget {
 
 
@@ -8,7 +9,9 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-
+  final _auth=FirebaseAuth.instance;
+  late String email;
+  late String password;
   TextEditingController UserNameTextEditing = new TextEditingController();
   TextEditingController EmailTextEditing = new TextEditingController();
   TextEditingController PasswordTextEditing = new TextEditingController();
@@ -35,6 +38,7 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               TextField(
+                keyboardType: TextInputType.emailAddress,
                 controller: EmailTextEditing,
                 style: TextStyle(color: Colors.white70),
                 decoration: InputDecoration(
@@ -65,26 +69,20 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               SizedBox(height: 8,),
-              Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(vertical: 20) ,
-                decoration: BoxDecoration(
-                  color: (const Color(0xff8c8c8c)),
-                  borderRadius: BorderRadius.circular(30),
-                ) ,
-                child: Text("Sign Up"),
+
+              SignInButtonBuilder(
+                text: '          Sign up',
+                  padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                onPressed: () {},
+                backgroundColor: Colors.blueAccent[700]!,
               ),
+
               SizedBox(height: 8,),
-              Container(
-                alignment: Alignment.center,
-                width: MediaQuery.of(context).size.width,
-                padding: EdgeInsets.symmetric(vertical: 20) ,
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(30),
-                ) ,
-                child: Text("Sign Up With Google"),
+              SignInButton(
+                Buttons.Google,
+                text: "Sign up with Google",
+                padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                onPressed: () {},
               ),
               SizedBox(height: 8,),
               Row(
