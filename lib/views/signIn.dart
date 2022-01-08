@@ -54,7 +54,7 @@ class _SignInState extends State<SignIn> {
               ),
               SizedBox(height: 8,),
         SignInButtonBuilder(
-          text: '          Sign in',
+          text: '             Sign in',
           padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
           onPressed: () {},
           backgroundColor: Colors.blueAccent[700]!,
@@ -72,17 +72,20 @@ class _SignInState extends State<SignIn> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   Text("Don't have an Account?",style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.0
                   ),
+                  ),
+                  GestureDetector(
                   ),
                   Text("Register Now",style: TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
                     decoration: TextDecoration.underline
                   ),
-                  )
+                  ),
                 ],
               ),
               SizedBox(height: 90,)

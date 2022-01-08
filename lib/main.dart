@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lets_talk/views/Searchforusers.dart';
+import 'package:lets_talk/views/chatRooms.dart';
 import 'package:lets_talk/views/signIn.dart';
 import 'package:lets_talk/views/signUp.dart';
 
@@ -10,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'FYP Wissam Al Atat',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor:(
@@ -18,9 +20,10 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.purple,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-
       ),
-      home: SignIn(),
+
+      home: SearchForUsers(),
+
     );
   }
 }

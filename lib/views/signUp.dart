@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'chatRooms.dart';
 class SignUp extends StatefulWidget {
 
 
@@ -73,7 +74,17 @@ class _SignUpState extends State<SignUp> {
               SignInButtonBuilder(
                 text: '          Sign up',
                   padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
-                onPressed: () {},
+                onPressed: ()  async {
+                  try{
+                    final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                  if(newUser !=null){
+
+                  }
+                  }
+                  catch(e){
+                    print(e);
+                  }
+                },
                 backgroundColor: Colors.blueAccent[700]!,
               ),
 
